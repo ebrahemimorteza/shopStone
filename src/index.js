@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const tick = ()=>{
     const elem=(
     <div>
-    <h1>time day</h1>
+    <h1>time eday</h1>
     {new Date().toLocaleTimeString()}
     </div>
     )
