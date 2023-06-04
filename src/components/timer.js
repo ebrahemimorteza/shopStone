@@ -68,6 +68,7 @@ render(){
             <button className="button_action button_start" onClick={this.startInterval}>start</button>
             <button className="button_action button_stop" onClick={this.stopInterval}>stop</button>
             <button className="button_action button_reset" onClick={this.resetInterval}>reset</button>
+            <button className="button_action button_reset" onClick={this.props.handleTitle}>resetHook</button>
         </div> 
         </div>
     )
