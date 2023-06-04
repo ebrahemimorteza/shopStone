@@ -1,8 +1,9 @@
 import ReactDOM from "react-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect, useContexte} from "react";
 import Timer from "./timer";
 import Hello from "./hello";
+import TsetContext from "../context/context";
 // class App extends React.Component{
 //     constructor(){
 //         super();
@@ -27,9 +28,11 @@ import Hello from "./hello";
 const App=()=>{
     const[title,setTitle]=useState('welcome with hoock');
     const[islight,setIsLight]=useState(false);
+    const[timeArr,setTimeArr]=useState(["01:05:12","02:06:12"])
     // var a=1;
     // var b=2;
     // [a,b]=[1,2]
+
     const handleTitle = ()=>{
         setTitle('welcome morteza');
             }
@@ -44,10 +47,12 @@ return()=>{
 
             },[islight])
     return(
+        <TsetContext.Provider value={{timeArr:timeArr,setTimeArr:setTimeArr}}>
         <div className="main" style={{background:islight ? "white" : "green"}}>
          <Hello title={title}/>
-        <Timer handleIsLight={handleIsLight} handleTitle={handleTitle}/>
+        <Timer  handleIsLight={handleIsLight} handleTitle={handleTitle}/>
         </div>
+        </TsetContext.Provider>
     )
  
 }
