@@ -7,16 +7,20 @@ class App extends React.Component{
     constructor(){
         super();
         this.state = {
-            time:new Date().toLocaleTimeString()
+            time:new Date().toLocaleTimeString(),
+            title:"hi bro welcome to the page"
         }
     }
     render(){
         return(
         <div className="main">
-        <Hello/>
-        <Timer/>
+        <Hello title={this.state.title}/>
+        <Timer handleTitle={this.handleTitle}/>
         </div>
         )
+    }
+     handleTitle=()=>{
+     this.setState({title:"site code"})
     }
 }
 export default App

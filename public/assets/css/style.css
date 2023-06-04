@@ -26,3 +26,21 @@ body {
     background-color: black;
     color: chocolate;
 }
+
+.button_start {
+    background: green;
+    border-radius: 50%;
+    padding: 20px
+}
+
+.button_stop {
+    background: red;
+    border-radius: 50%;
+    padding: 20px
+}
+
+.button_reset {
+    background: white;
+    border-radius: 50%;
+    padding: 20px
+}
