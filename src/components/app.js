@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import Timer from "./timer";
 import Hello from "./hello";
 // class App extends React.Component{
@@ -25,17 +25,28 @@ import Hello from "./hello";
 // }
 //*******************************************************functional */
 const App=()=>{
-    const[title,setTitle]=useState('welcome with hoock')
+    const[title,setTitle]=useState('welcome with hoock');
+    const[islight,setIsLight]=useState(false);
     // var a=1;
     // var b=2;
     // [a,b]=[1,2]
     const handleTitle = ()=>{
         setTitle('welcome morteza');
             }
+    const handleIsLight = ()=>{
+        setIsLight(!islight);
+            }
+            useEffect(()=>{
+console.log("didmounth");
+return()=>{
+    console.log("will");
+}
+
+            },[islight])
     return(
-        <div className="main">
+        <div className="main" style={{background:islight ? "white" : "green"}}>
          <Hello title={title}/>
-        <Timer handleTitle={handleTitle}/>
+        <Timer handleIsLight={handleIsLight} handleTitle={handleTitle}/>
         </div>
     )
  
