@@ -4,6 +4,7 @@ import React,{useState,useEffect, useContexte} from "react";
 import Timer from "./timer";
 import Hello from "./hello";
 import TsetContext from "../context/context";
+import TimeList from "./timeList";
 // class App extends React.Component{
 //     constructor(){
 //         super();
@@ -51,6 +52,7 @@ return()=>{
         <div className="main" style={{background:islight ? "white" : "green"}}>
          <Hello title={title}/>
         <Timer  handleIsLight={handleIsLight} handleTitle={handleTitle}/>
+        <TimeList /> 
         </div>
         </TsetContext.Provider>
     )

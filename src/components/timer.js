@@ -82,11 +82,7 @@ render(){
             <button className="button_action button_reset" onClick={this.resetInterval}>reset</button>
             <button className="button_action button_reset" onClick={this.props.handleIsLight}>resetHook</button>
         </div> 
-        <div className="button_box">
-        <TimeList>
-        {this.context.timeArr}
-        </TimeList> 
-        </div>
+
         </div>
     )
 }
